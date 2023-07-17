@@ -9,21 +9,18 @@
 
 <body>
     <header>
-        <div>
+        <div class="logo-container">
             <a href="<?php echo home_url('/'); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.svg" alt="Logo">
             </a>
-        </div>
-        <div>
-            <?php
-            wp_nav_menu([
-                'theme_location' => 'main',
-               // 'container' => false,
-                'menu_class' => 'navbar'
-            ]);
-             ?>
-        </div>
-
-
+            <div>
+                <?php
+                wp_nav_menu([
+                    'theme_location' => 'main',
+                // 'container' => false,
+                    'menu_class' => 'navbar'
+                ]);
+                ?>
+            </div>
         </div>
     </header>
