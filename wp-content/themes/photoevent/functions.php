@@ -1,4 +1,5 @@
 <?php
+require_once('assets/inc/assets.php');
 
 function register_my_menus()
 {
