@@ -8,3 +8,10 @@
 </head>
 
 <body>
+    <header>
+        <div>
+            <a href="<?php echo home_url('/'); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>'/assets/images/Logo.svg'" alt="Logo">
+            </a>
+        </div>
+    </header>
