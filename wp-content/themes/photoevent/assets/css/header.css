@@ -15,4 +15,9 @@ header {
     margin-top: 28px;
     margin-bottom: 66px;
     margin: 0 10%;
-  }
+}
+
+.menu-item {
+    font-family: 'Space-mono';
+}
+
