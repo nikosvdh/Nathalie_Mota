@@ -24,3 +24,4 @@
             </div>
         </div>
     </header>
+    <?php wp_body_open(); ?>
