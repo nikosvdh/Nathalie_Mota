@@ -8,20 +8,20 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
+    <header class="header">
+        <div class="header-container">
             <a href="<?php echo home_url('/'); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.svg" alt="Logo">
             </a>
-            <div>
-                <?php
-                wp_nav_menu([
+            <nav>
+                <ul class="navbar">
+                    <?php wp_nav_menu([
                     'theme_location' => 'main',
-                // 'container' => false,
                     'menu_class' => 'navbar'
-                ]);
-                ?>
-            </div>
+                ]); ?>
+                    <li><a href="#" class="menu-item" id="button">CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <?php wp_body_open(); ?>
