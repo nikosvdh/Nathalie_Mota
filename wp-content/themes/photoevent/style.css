@@ -21,3 +21,13 @@ li {
     display: flex;
     align-items: center;
 }
+
+html{
+    max-width: 1440px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
