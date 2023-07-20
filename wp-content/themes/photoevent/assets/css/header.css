@@ -171,7 +171,7 @@
         display: none;
     }
 
-    #myBtn, .custom-menu-item > a{
+    #myBtn, .accueil-menu-item > a, .apropos-menu-item > a {
       color: white;
       font-size: 1.43em;
   }
@@ -181,4 +181,10 @@
     .menu-toggle, .open_nav {
         display: none;
     }
+}
+
+@media all and (max-width: 480px) {
+  .logo {
+      width: 70%;
+  }
 }

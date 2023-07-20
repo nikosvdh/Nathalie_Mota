@@ -10,3 +10,15 @@
     width: 100%;
     height: 2.5em;
 }
+
+@media all and (max-width: 680px) {
+    .footer_menu {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 44px;
+    }
+
+   .footer_menu .menu-item {
+        padding-bottom: 24px;
+    }
+}
