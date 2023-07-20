@@ -153,10 +153,28 @@
         }
     } 
   
+/* MEDIA QUERIES */
+
+@media all and (max-width: 770px) {
+  .navbar .menu-item {
+      font-size: 16px;
+      padding-left: 1em;
+  }
+
+  .logo {
+      max-width: 85%;
+  }
+}
+
 @media all and (max-width: 620px) {
     .nav-desktop{
         display: none;
     }
+
+    #myBtn, .custom-menu-item > a{
+      color: white;
+      font-size: 1.43em;
+  }
 }
 
 @media all and (min-width: 620px) {
