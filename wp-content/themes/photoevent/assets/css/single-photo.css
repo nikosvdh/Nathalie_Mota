@@ -1,0 +1,46 @@
+.info-pic {
+    font-family: 'space-mono';
+    font-size: 0.87em;
+    letter-spacing: 0.1em;
+    line-height: 21px;
+    margin: 0 10%;
+    height: 52.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 397px;
+  }
+
+.info {
+    min-width: 50%;
+    margin-right: 3%;
+    padding-bottom: 43px;
+    border-bottom: 1px solid;
+}
+
+.part {
+    flex: 1;
+}
+
+.title-pic {
+    font-family: 'space-mono-italic';
+    font-size: 4.1em;
+    font-weight: 400;
+    line-height: 58px;
+    padding-bottom: 20px;    
+}
+
+.info-margin {
+    margin: 4px 0px;
+}
+
+.gallery-img {
+    height: 100%; 
+    width: 100%;
+    min-height: 397px;
+}
+
+.gallery-pic, .img-full {
+    height: 100%; 
+    width: 100%;
+}
