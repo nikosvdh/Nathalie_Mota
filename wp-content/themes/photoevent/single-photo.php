@@ -44,7 +44,7 @@ while ( have_posts() ) :
 endwhile; // End of the loop.
 ?>
 
-<!-- CTA CONTACT -->
+<!-- IS INTERESTED + CTA -->
 
 <div class="is-interested">
     <div class="is-interested-text-button">
@@ -89,9 +89,9 @@ endwhile; // End of the loop.
                 <?php
 				if (isset($previousThumbnail) && !empty($previousThumbnail)) {
 					// Afficher l'image suivante
-					echo '<img class="previous-img" src="' . $previousThumbnail . '" alt="affichage de la photo précédente" />';
+					echo '<img class="previous-img" src="' . $previousThumbnail . '" alt="afficher la photo précédente" />';
 				} else {
-					// Afficher un message d'erreur ou une image par défaut
+					// Afficher un message d'erreur ?
 					echo '<p></p>';
 				}
 				?>
@@ -100,9 +100,9 @@ endwhile; // End of the loop.
                 <?php
 				if (isset($nextThumbnail) && !empty($nextThumbnail)) {
 					// Afficher l'image suivante
-					echo '<img class= "next-img" src="' . $nextThumbnail . '" alt="affichage de la photo suivante" />';
+					echo '<img class= "next-img" src="' . $nextThumbnail . '" alt="afficher la photo suivante" />';
 				} else {
-					// Afficher un message d'erreur ou une image par défaut
+					// Afficher un message d'erreur ?
 					echo '<p></p>';
 				}
 				?> </div>
@@ -110,5 +110,49 @@ endwhile; // End of the loop.
     </div>
 
 </div>
+
+<!-- Photos apparentées -->
+
+<div class="gallery">
+    <h3 class="you-may-also-like">VOUS AIMEREZ AUSSI</h3>
+    <div class="gallery-container">
+        <?php
+           
+		$category = strip_tags(get_the_term_list($post->ID, 'categorie'));
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		$morePics = new WP_Query(array(
+			'post_type' => 'photo',
+			'post__not_in' => array(get_the_ID()),
+			'orderby' => 'date',
+			'order' => 'DESC',
+			'posts_per_page' => 2,
+			'paged' => $paged,
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'categorie',
+					'field' => 'slug',
+					'terms' => $category,
+				),
+			),
+
+		));
+
+		$countPictures = $morePics->post_count;
+		if ($countPictures > 0) {
+			show_gallery($morePics);
+		} else {
+			echo '<p>Il n\'y a pas d\'autres photos dans cette catégorie.</p>';
+		}
+        
+		?>
+    </div>
+</div>
+
+<div class="button-container">
+    <a href="<?php echo home_url('/'); ?>">
+        <button class="button all-pics-button">Toutes les photos</button>
+    </a>
+</div>
+
 
 <?php get_footer(); ?>

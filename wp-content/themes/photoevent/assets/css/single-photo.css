@@ -106,5 +106,38 @@
     height: 80px;
 }
   
+/* You may also like */
+.you-may-also-like {
+    font-family: 'space-mono';
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    padding-top: 77px;
+    padding-bottom: 35px;
+}
 
-  
+.button-container{
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.all-pics-button {
+    margin-top: 5em;
+    margin-bottom: 5.6em;
+}
+
+.gallery {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-container {
+    max-width: 1148px;
+    margin: auto;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px;
+}

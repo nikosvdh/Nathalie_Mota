@@ -40,7 +40,7 @@ function wpdocs_theme_setup()
     add_image_size('custom-size', 500, 500, true);
 }
 
-// Affichage des photos de la single page
+// Affichage des photos apparentées de la single page
 
 function show_gallery($ajaxposts)
 {
