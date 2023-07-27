@@ -21,10 +21,10 @@ while ( have_posts() ) :
                 <p class="info-margin">RÉFÉRENCE : <?php echo get_field('reference'); ?></p>
             </li>
             <li>
-                <p class="info-margin">CATÉGORIE : <?php the_terms(get_the_ID(), 'categorie'); ?></p>
+                <p class="info-margin">CATÉGORIE : <?php echo get_the_terms(get_the_ID(), 'categorie')[0]->name; ?></p>
             </li>
             <li>
-                <p class="info-margin">FORMAT : <?php the_terms(get_the_ID(), 'format'); ?></p>
+                <p class="info-margin">FORMAT : <?php echo get_the_terms(get_the_ID(), 'format') [0]->name; ?></p>
             </li>
             <li>
                 <p class="info-margin">TYPE : <?php echo get_field('type'); ?></p>
