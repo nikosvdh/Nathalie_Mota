@@ -37,7 +37,7 @@ function toggleMenu () {
   toggleMenu()
 
 
-// MISE EN PLACE DE L'APPARITION DE LA MINIATURE DE LA PHOTO AU SURVOL DU LIEN
+// MISE EN PLACE DE L'APPARITION DE LA MINIATURE DE LA PHOTO AU SURVOL DES FLÈCHES
 // Récupération des éléments
 let leftArrow = document.querySelector('.arrow_left')
 let rightArrow  = document.querySelector('.arrow_right')
@@ -49,11 +49,11 @@ if (nextImg && previousImg) {
   previousImg.style.opacity = 0
 } 
 
-// Ajouter un événement au survol des éléments HTML
-navigationPhotos(leftArrow, previousImg)
-navigationPhotos(rightArrow, nextImg)
+// Ajout des événements au survol des flèches
+showSliderPictures(leftArrow, previousImg)
+showSliderPictures(rightArrow, nextImg)
 
-function navigationPhotos(arrow, image) {
+function showSliderPictures(arrow, image) {
   if (arrow) {
     arrow.addEventListener('mouseover', function() {
       image.style.opacity = '1'
