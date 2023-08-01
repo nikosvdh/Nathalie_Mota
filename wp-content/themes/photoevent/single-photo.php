@@ -86,7 +86,7 @@ endwhile; // End of the loop.
         </div>
         <div class="img-container">
             <div>
-                <?php
+                <?php /*
 				if (isset($previousThumbnail) && !empty($previousThumbnail)) {
 					// Afficher l'image suivante
 					echo '<img class="previous-img" src="' . $previousThumbnail . '" alt="afficher la photo précédente" />';
@@ -94,8 +94,10 @@ endwhile; // End of the loop.
 					// Afficher un message d'erreur ?
 					echo '<p></p>';
 				}
+                */
 				?>
             </div>
+
             <div>
                 <?php
 				if (isset($nextThumbnail) && !empty($nextThumbnail)) {
@@ -105,7 +107,8 @@ endwhile; // End of the loop.
 					// Afficher un message d'erreur ?
 					echo '<p></p>';
 				}
-				?> </div>
+				?>
+            </div>
         </div>
     </div>
 
