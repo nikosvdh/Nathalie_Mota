@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 
 
-<!-- hero -->
+<!-- HERO -->
 
 <div class="hero">
     <h1 class="site-title"><?php the_title() ?></h1>
@@ -21,11 +21,34 @@
             'showposts' => 1,
             'orderby' => 'rand',
         )
-    ); ?>
-    <?php if (have_posts()) :
+    ); 
+    ?>
+    <?php 
+    if (have_posts()) :
         while (have_posts()) :
-            the_post(); ?>
-    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title_attribute(); ?>"> <?php
+            the_post(); 
+            ?>
+    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title_attribute(); ?>">
+    <?php
         endwhile;
-        endif; ?>
+    endif; 
+    ?>
+</div>
+
+
+<!-- PICTURES LIST  -->
+
+<div>
+    <?php
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $gallery = new WP_Query(array(
+        'post_type' => 'photo',
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'posts_per_page' => 12,
+        'paged' => $paged,
+    ));
+
+    show_gallery($gallery, false);
+?>
 </div>
