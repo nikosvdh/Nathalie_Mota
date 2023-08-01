@@ -9,6 +9,7 @@ function photoevent_enqueue_styles()
     wp_enqueue_style("style_typo", get_template_directory_uri() . '/assets/css/typo.css');
     wp_enqueue_style("style_contact", get_template_directory_uri() . '/assets/css/contact.css');
     wp_enqueue_style("style_single", get_template_directory_uri() . '/assets/css/single-photo.css');
+    wp_enqueue_style("style_home", get_template_directory_uri() . '/assets/css/template-home.css');
 }
 add_action('wp_enqueue_scripts', 'photoevent_enqueue_styles');
 

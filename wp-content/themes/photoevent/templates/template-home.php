@@ -11,7 +11,7 @@
 <!-- hero -->
 
 <div>
-    <h1><?php the_title() ?></h1>
+    <h1 class="site-title"><?php the_title() ?></h1>
 
     <?php 
     // Affichage d'une image aléatoire à partir des articles de type "photo"
