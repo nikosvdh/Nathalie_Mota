@@ -10,7 +10,7 @@
 
 <!-- hero -->
 
-<div>
+<div class="hero">
     <h1 class="site-title"><?php the_title() ?></h1>
 
     <?php 
