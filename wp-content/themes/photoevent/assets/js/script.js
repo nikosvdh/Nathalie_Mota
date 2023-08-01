@@ -35,3 +35,31 @@ function toggleMenu () {
     })
   }
   toggleMenu()
+
+
+// MISE EN PLACE DE L'APPARITION DE LA MINIATURE DE LA PHOTO AU SURVOL DU LIEN
+// Récupération des éléments
+let leftArrow = document.querySelector('.arrow_left')
+let rightArrow  = document.querySelector('.arrow_right')
+let previousImg = document.querySelector('.previous-img')
+let nextImg = document.querySelector('.next-img')
+
+if (nextImg && previousImg) {
+  nextImg.style.opacity = 0
+  previousImg.style.opacity = 0
+} 
+
+// Ajouter un événement au survol des éléments HTML
+navigationPhotos(leftArrow, previousImg)
+navigationPhotos(rightArrow, nextImg)
+
+function navigationPhotos(arrow, image) {
+  if (arrow) {
+    arrow.addEventListener('mouseover', function() {
+      image.style.opacity = '1'
+    })
+    arrow.addEventListener('mouseout', function() {
+      image.style.opacity = '0'
+    })
+  }
+}

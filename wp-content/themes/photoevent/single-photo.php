@@ -63,7 +63,8 @@ endwhile; // End of the loop.
 				$previousThumbnail = get_the_post_thumbnail_url($previousPhoto->ID);
 				$previousLink = get_permalink($previousPhoto); ?>
             <a href="<?php echo $previousLink; ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Arrow_left.png"
+                <img class="arrow arrow_left"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/Arrow_left.png"
                     alt="Flèche vers la gauche" />
             </a>
             <?php } else { ?>
@@ -75,7 +76,8 @@ endwhile; // End of the loop.
 				$nextThumbnail = get_the_post_thumbnail_url($nextPhoto->ID);
 				$nextLink = get_permalink($nextPhoto); ?>
             <a href="<?php echo $nextLink; ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Arrow_right.png"
+                <img class="arrow arrow_right"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/Arrow_right.png"
                     alt="Flèche vers la droite" />
             </a>
             <?php } else { ?>
@@ -86,15 +88,14 @@ endwhile; // End of the loop.
         </div>
         <div class="img-container">
             <div>
-                <?php /*
+                <?php
 				if (isset($previousThumbnail) && !empty($previousThumbnail)) {
-					// Afficher l'image suivante
+					// Afficher l'image précédente
 					echo '<img class="previous-img" src="' . $previousThumbnail . '" alt="afficher la photo précédente" />';
 				} else {
 					// Afficher un message d'erreur ?
 					echo '<p></p>';
 				}
-                */
 				?>
             </div>
 
