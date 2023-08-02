@@ -35,29 +35,31 @@
     ?>
 </div>
 
+<section class="gallery">
 
-<!-- PICTURES LIST  -->
+    <!-- PICTURES LIST  -->
 
-<div class="post-list">
-    <?php
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    $gallery = new WP_Query(array(
-        'post_type' => 'photo',
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'posts_per_page' => 8,
-        'paged' => $paged,
-    ));
+    <div class="gallery-container">
+        <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $gallery = new WP_Query(array(
+            'post_type' => 'photo',
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'posts_per_page' => 8,
+            'paged' => $paged,
+        ));
 
-    show_gallery($gallery, false);
-?>
-</div>
+        show_gallery($gallery, false);
+    ?>
+    </div>
 
 
-<!-- PAGINATION-->
+    <!-- PAGINATION-->
 
-<div class="button-container">
-    <a id="load-more" href="#!"><button class="button">Charger plus</button></a>
-</div>
+    <div class="button-container">
+        <a id="load-more" data-current-index="1" href="#!"><button class="button">Charger plus</button></a>
+    </div>
+</section>
 
 <?php get_footer(); ?>

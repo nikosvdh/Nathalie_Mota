@@ -127,13 +127,16 @@
     margin-bottom: 5.6em;
 }
 
-.gallery {
+
+/* Gallery single page */
+
+.gallery { /*used for home page too */
     margin: 0 10%;
     display: flex;
     flex-direction: column;
 }
 
-.gallery-container {
+.gallery-container { /*used for home page too */
     max-width: 1148px;
     margin: auto;
     padding: 20px 0;
@@ -142,7 +145,7 @@
     grid-gap: 20px;
 }
 
-.button:hover {
+.button:hover { /*used for home page too */
     background-color: black;
     color: white;
 }

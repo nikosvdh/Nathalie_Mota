@@ -20,7 +20,7 @@ $categories = get_terms(array(
 ?>
 
 
-<div class="gallery-pic">
+<div class="gallery-pic resize-pic">
     <div class="gallery-img">
         <img id="img-full" class="img-full" src="<?php echo $thumbnail_url[0]; ?>" alt="<?php echo $thumbnail_alt; ?>"
             title="<?php echo $article_title; ?>" data-src-full="<?php the_post_thumbnail_url() ?>">
