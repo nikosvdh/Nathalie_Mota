@@ -37,6 +37,23 @@
 
 <section class="gallery">
 
+    <div>
+        <!-- Filter by Category -->
+        <select id="category-filter">
+            <option value="all">CATÉGORIES</option>
+        </select>
+
+        <!-- Filter by Format -->
+        <select id="format-filter">
+            <option value="all">FORMATS</option>
+        </select>
+
+        <!-- Sorting Options -->
+        <select id="sort-by">
+            <option value="date">TRIER PAR</option>
+        </select>
+    </div>
+
     <!-- PICTURES LIST  -->
 
     <div class="gallery-container">
