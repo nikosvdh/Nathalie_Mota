@@ -64,7 +64,7 @@ function weichie_load_more()
     // on récupère les publications de type "photo"
     $ajaxposts = new WP_Query([
         'post_type' => 'photo',
-        'posts_per_page' => 8, // 16 post donc 2 pages
+        'posts_per_page' => 12, // 16 post donc 2 pages
         'paged' => $paged,
         'order' => 'DESC', // du plus récent au plus ancien
         'orderby' => ['date' => 'DESC', 'ID' => 'ASC'] // On trie par date de manière décroissante et ensuite par ID de manière croissante pour résoudre les éventuelles égalités

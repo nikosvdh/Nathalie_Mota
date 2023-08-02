@@ -127,7 +127,7 @@
             'post_type' => 'photo',
             'orderby' => 'date',
             'order' => 'DESC',
-            'posts_per_page' => 8,
+            'posts_per_page' => 12,
             'paged' => $paged,
         ));
 
