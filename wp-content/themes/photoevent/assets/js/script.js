@@ -1,19 +1,18 @@
 // SCRIPT POUR DÉPLACER LE LIEN "CONTACT" DANS LE MENU PRINCIPAL
 // on empêche que le script soit exécuté avant que le bouton "CONTACT" ne soit rendu dans le DOM en encapsulant le script dans une fonction et en l'exécutant lorsque le document est prêt à l'aide de l'événement "DOMContentLoaded"
 document.addEventListener("DOMContentLoaded", function () { 
-  (function($) {
+(function($) {
       
-      // Sélection du bouton et de la nav
-      var button = document.getElementById("myBtn");
-      var menu = document.querySelector(".navbar");
+// Sélection du bouton et de la nav
+var button = document.getElementById("myBtn");
+var menuDiv = document.querySelector(".navbar");
       
-      // Déplacement du bouton dans l'ul
-      menu.appendChild(button);
-  })(jQuery);
-});
+// Déplacement du bouton dans l'ul
+menuDiv.appendChild(button);
 
 
 // SCRIPT POUR OUVRIR/FERMER LE MENU BURGER
+
 // Récupération du bouton du menu et de la liste des liens
 const menuBtn = document.querySelector('.menu-toggle')
 const menu = document.querySelector('.open_nav')
@@ -63,3 +62,26 @@ function showSliderPictures(arrow, image) {
     })
   }
 }
+
+  // PAGINATION PAGE D'ACCUEIL
+  let loadMore = document.getElementById('load-more') // on récupère l'élément qui porte l'ID "load-more"
+
+  let currentPage = 1;
+  $('#load-more').on('click', function() {
+    currentPage++; // on incrémente de 1 à chaque clique sur le bouton qui porte cet ID
+
+    $.ajax({ // requête AJAX vers le serveur de type POST à l'URL
+      type: 'POST',
+      url: '/wp-admin/admin-ajax.php',
+      dataType: 'html',
+      data: {
+        action: 'weichie_load_more',
+        paged: currentPage,
+      },
+      success: function (res) { // on ajoute la page suivante des publications à l'élément qui porte la classe "publication-list".
+        $('.post-list').append(res);
+      }
+    });
+  });
+})(jQuery); 
+})

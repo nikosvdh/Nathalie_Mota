@@ -53,3 +53,44 @@ function show_gallery($ajaxposts)
 
     endwhile;
 }
+
+
+// REQUÊTE AJAX POUR CHARGER PLUS DE CONTENU SUR LA PAGE D'ACCUEIL (PAGINATION)
+
+function weichie_load_more()
+{
+    $paged = $_POST['paged']; // On récupère avec la méthode POST, la valeur de "paged" qui a été envoyée depuis la requête AJAX (page actuelle du contenu à récupérer)
+
+    // on récupère les publications de type "photo"
+    $ajaxposts = new WP_Query([
+        'post_type' => 'photo',
+        'posts_per_page' => 8, // 16 post donc 2 pages
+        'paged' => $paged,
+        'order' => 'DESC', // du plus récent au plus ancien
+        'orderby' => ['date' => 'DESC', 'ID' => 'ASC'] // On trie par date de manière décroissante et ensuite par ID de manière croissante pour résoudre les éventuelles égalités
+    ]);
+
+    $response = ''; // on initialise la variable qu'on utilisera pour stocket le code HTML des images
+
+    if ($ajaxposts->have_posts()) {
+        while ($ajaxposts->have_posts()) : $ajaxposts->the_post();
+            $response .=  get_template_part('template-parts/content', 'image');
+        endwhile;
+    } else {
+        $response = '';
+    }
+
+    echo $response; // on affiche le contenu récupéré
+    exit;
+}
+add_action('wp_ajax_weichie_load_more', 'weichie_load_more'); // utilisateur connecté
+add_action('wp_ajax_nopriv_weichie_load_more', 'weichie_load_more'); // utilisateur anonyme
+
+// On évite les pb de chargement en désactivant la mise en cache des requêtes
+function weichie_disable_ajax_cache()
+{
+    if (defined('DOING_AJAX') && DOING_AJAX) {
+        define('DONOTCACHEPAGE', true);
+    }
+}
+add_action('init', 'weichie_disable_ajax_cache');

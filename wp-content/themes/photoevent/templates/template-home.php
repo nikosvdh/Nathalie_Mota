@@ -38,17 +38,26 @@
 
 <!-- PICTURES LIST  -->
 
-<div>
+<div class="post-list">
     <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $gallery = new WP_Query(array(
         'post_type' => 'photo',
         'orderby' => 'date',
         'order' => 'DESC',
-        'posts_per_page' => 12,
+        'posts_per_page' => 8,
         'paged' => $paged,
     ));
 
     show_gallery($gallery, false);
 ?>
 </div>
+
+
+<!-- PAGINATION-->
+
+<div class="button-container">
+    <a id="load-more" href="#!"><button class="button">Charger plus</button></a>
+</div>
+
+<?php get_footer(); ?>
