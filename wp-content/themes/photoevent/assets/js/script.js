@@ -65,28 +65,4 @@ function showSliderPictures(arrow, image) {
 })(jQuery); 
 })
 
-
-// PAGINATION PAGE D'ACCUEIL
-
-jQuery(document).ready(function($) {
-  let currentPage = 1;
-  $('#load-more').on('click', function(event) { // Ajout d'un event listener au clic
-      currentPage++; // on incrémente de 1 à chaque clique sur le bouton qui porte cet ID
-      $.ajax({ // On envoie une requête AJAX vers le serveur de type POST à l'URL
-          url: 'wp-admin/admin-ajax.php', // Use the global ajaxurl variable provided by WordPress
-          method: 'POST',
-          data: {
-              action: 'weichie_load_more',
-              paged: currentPage,
-          },
-          success: function(res) { // on ajoute la page suivante des publications à l'élément qui porte la classe "gallery-container".
-              console.log(res);
-              $('.gallery-container').append(res);
-          },
-          error: function(res) {
-              console.log('Error');
-          }
-      });
-  });
-})
  

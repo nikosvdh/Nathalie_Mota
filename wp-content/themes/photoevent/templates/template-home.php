@@ -40,10 +40,10 @@
     <div>
         <!-- Fonction pour récupéter et afficher les catégories -->
 
-        <?php function showCategories($taxonomyName)
+        <?php function showCategories($taxonomy)
         {
             if ($terms = get_terms(array(
-                'taxonomy' => $taxonomyName,
+                'taxonomy' => $taxonomy,
                 'orderby' => 'name'
             ))) {
                 foreach ($terms as $term) {
@@ -60,13 +60,12 @@
 
             <div>
                 <form>
-                    <label for="categories-label">Catégories</label>
-                    <select id="categories"> -->
+                    <select id="categories">
                         <option value="all" hidden></option>
-                        <option value="all">Toutes les catégories</option>
+                        <option value="all" selected>CATÉGORIES</option>
                         <?php
                         $categories = get_terms(array(
-                            "taxonomy" => "categories",
+                            "taxonomy" => "categorie",
                             "hide_empty" => false,
                         ));
                         foreach ($categories as $categorie) {
@@ -75,20 +74,18 @@
                         ?>
                     </select>
                 </form>
-
             </div>
 
             <!-- Filter Formats -->
 
             <div>
                 <form>
-                    <label for="format-label">Formats</label>
-                    <select id="format">
+                    <select id="formats">
                         <option value="all" hidden></option>
-                        <option value="all">Tous les formats</option>
+                        <option value="all" selected>FORMATS</option>
                         <?php
                         $formats = get_terms(array(
-                            "taxonomy" => "formats",
+                            "taxonomy" => "format",
                             "hide_empty" => false,
                         ));
                         foreach ($formats as $format) {
@@ -102,13 +99,13 @@
 
         </div>
 
-        <!-- Filter Sort By -->
+        <!-- Filter Sort By Date -->
 
         <div>
             <form>
-                <label for="sort-by-label">Trier par</label>
-                <select id="sort-by">
+                <select id="sort-by-date">
                     <option value="all" hidden></option>
+                    <option value="all" selected>TRIER PAR</option>
                     <option value="DESC">Les plus récentes</option>
                     <option value="ASC">Les plus anciennes</option>
                 </select>

@@ -47,12 +47,66 @@ function show_gallery($ajaxposts)
     while ($ajaxposts->have_posts()) :
         $ajaxposts->the_post();
 
-        // Récupération de l'image mise en avant dans le post
+        // Resize (500*500px) et récupération de l'image mise en avant dans le post
+        add_image_size('custom-size', 500, 500, true);
 
         get_template_part('template-parts/content', 'image');
 
     endwhile;
 }
+
+
+// REQUÊTE AJAX POUR FILTRER LES IMAGES
+
+function showTaxonomies($taxonomy)
+{
+    if ($terms = get_terms(array(
+        'taxonomy' => $taxonomy,
+        'orderby' => 'name'
+    ))) {
+        foreach ($terms as $term) {
+            echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
+        }
+    }
+}
+
+function filters_images()
+{
+    $selectedCategory = $_POST['selectedCategory'];
+    $selectedFormat = $_POST['selectedFormat'];
+    $args = array(
+        'post_type' => 'photo',
+        'posts_per_page' => 12,
+        'orderby' => 'date',
+        'order' => $_POST['orderDirection'],
+        'tax_query' => array(
+            array(
+                'relation' => 'AND',
+                $_POST['selectedCategory'] != "all" ?
+                    array(
+                        'taxonomy' => 'categories',
+                        'field' => 'slug',
+                        'terms' => $_POST['selectedCategory'],
+                    )
+                    : '',
+                $_POST['selectedFormat'] != "all" ?
+                    array(
+                        'taxonomy' => 'formats',
+                        'field' => 'slug',
+                        'terms' => $_POST['selectedFormat'],
+                    )
+                    : '',
+            ),
+        ),
+    );
+
+    $query = new WP_Query($args);
+    show_gallery($query, true);
+
+    wp_die();
+};
+add_action('wp_ajax_nopriv_filters_images', 'filters_images');
+add_action('wp_ajax_filters_images', 'filters_images');
 
 
 // REQUÊTE AJAX POUR CHARGER PLUS DE CONTENU SUR LA PAGE D'ACCUEIL (PAGINATION)
@@ -64,7 +118,7 @@ function weichie_load_more()
     // on récupère les publications de type "photo"
     $ajaxposts = new WP_Query([
         'post_type' => 'photo',
-        'posts_per_page' => 12, // 16 post donc 2 pages
+        'posts_per_page' => 12, // 16 post au total
         'paged' => $paged,
         'order' => 'DESC', // du plus récent au plus ancien
         'orderby' => ['date' => 'DESC', 'ID' => 'ASC'] // On trie par date de manière décroissante et ensuite par ID de manière croissante pour résoudre les éventuelles égalités
@@ -85,6 +139,7 @@ function weichie_load_more()
 }
 add_action('wp_ajax_weichie_load_more', 'weichie_load_more'); // utilisateur connecté
 add_action('wp_ajax_nopriv_weichie_load_more', 'weichie_load_more'); // utilisateur anonyme
+
 
 // On évite les pb de chargement en désactivant la mise en cache des requêtes
 function weichie_disable_ajax_cache()
