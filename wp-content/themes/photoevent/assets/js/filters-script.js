@@ -19,12 +19,12 @@ jQuery(document).ready(function($) {
             }
         });
     });
-  })
+})
 
 
 // FILTRES PAGE D'ACCUEIL
 jQuery(document).ready(function($) {
-    // On attache un Event listener à chaque selects pour changer le filtre
+    // On ajoute un event listener à chaque Selects pour détecter les changements au niveau de ces Selects 
     $('#categories, #formats, #sort-by-date').on('change', function() {
         // On récupère les valeurs des filtres
         let category = $('#categories')
@@ -40,18 +40,18 @@ jQuery(document).ready(function($) {
             url: '/wp-admin/admin-ajax.php',
             method: 'POST',
             data: {
-                action: 'filters_images', // On appelle l'action située dans functions.php
+                action: 'filters_images', // Quand un changement est détecté la requête AJAX est lancée : on appelle la fonction "filters_images" située dans functions.php
                 selectedFormat: selectedFormat,
                 selectedCategory: selectedCategory,
                 orderDirection: sortByDate
             },
             success: function(res) {
-               // console.log(res)
+               console.log(res)
                 $('.gallery-container').html(res); // on met à jour la gallerie
 
             },
             error: function(res) {
-                // console.log(res)
+                console.log(res)
             }
         });
     });

@@ -1,6 +1,6 @@
-// FORMULAIRE DE CONTACT
+// Gestion de l'ouverture et de la fermeture de la modale de contact
 
-let modal = document.getElementById('modal');
+let modal = document.getElementById('myModal');
 
 if (modal) {
   let btn = document.querySelectorAll('.modal-js');
@@ -15,7 +15,7 @@ if (modal) {
   });
 }
     
-// Quand on clique n'importe où en dehors de la modale, on la ferme
+// Quand on clique en dehors de la modale, on la ferme
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = 'none';
