@@ -1,9 +1,12 @@
-<div>
-    <button> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/crossmark.png"
+<div class="lightbox">
+    <button class="close-lightbox"> <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/lightbox_crossmark.png"
             alt="Croix pour fermer la modale" /></button>
-    <button> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lightbox_arrow_left.png"
+    <button class="previous-pic-lightbox"> <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/lightbox_arrow_left.png"
             alt="Flèche vers la gauche" /> </button>
-    <button><img src="<?php echo get_template_directory_uri(); ?>/assets/images/lightbox_arrow_right.png"
+    <button class="next-pic-lightbox"> <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/lightbox_arrow_right.png"
             alt="Flèche vers la droite" />
     </button>
 
