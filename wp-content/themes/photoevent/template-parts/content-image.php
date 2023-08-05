@@ -26,17 +26,18 @@ $categories = get_terms(array(
             title="<?php echo $article_title; ?>" data-src-full="<?php the_post_thumbnail_url() ?>">
         <div>
             <a href="#">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icon_fullscreen.png"
+                <img class="icon-full"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/Icon_fullscreen.png"
                     alt="Icône plein écran" />
             </a>
             <a href="<?php echo get_post_permalink(); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icon_eye.png" alt="Icône oeil" />
             </a>
 
-            <div data-date=<?php $post_date = get_the_date('Y');
+            <div class="gallery-data" data-year=<?php $post_date = get_the_date('Y');
                 echo $post_date; ?>>
-                <p><?php echo $article_title; ?></p>
-                <p><?php echo the_terms(get_the_ID(), 'categories', false); ?></p>
+                <p class="gallery-title"><?php echo $article_title; ?></p>
+                <p class="gallery-category"><?php echo the_terms(get_the_ID(), 'categories', false); ?></p>
             </div>
         </div>
     </div>

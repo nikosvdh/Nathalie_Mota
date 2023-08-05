@@ -1,4 +1,4 @@
-<div class="lightbox">
+<div class="lightbox active">
     <button class="close-lightbox"> <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/lightbox_crossmark.png"
             alt="Croix pour fermer la modale" /></button>
@@ -10,7 +10,7 @@
             alt="Flèche vers la droite" />
     </button>
 
-    <div>
+    <div class="lightbox-div">
         <div>
             <?php if (has_post_thumbnail()) : ?>
             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title_attribute(); ?>"
