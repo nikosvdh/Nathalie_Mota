@@ -18,7 +18,8 @@ while ( have_posts() ) :
                 <h2 class="title-pic"> <?php echo the_title(); ?></h2>
             </li>
             <li>
-                <p class="info-margin">RÉFÉRENCE : <?php echo get_field('reference'); ?></p>
+                <p class="info-margin ref">RÉFÉRENCE : <span id="reference"><?php echo get_field('reference'); ?></span>
+                </p>
             </li>
             <li>
                 <p class="info-margin">CATÉGORIE : <?php echo get_the_terms(get_the_ID(), 'categorie')[0]->name; ?></p>
