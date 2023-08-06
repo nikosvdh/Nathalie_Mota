@@ -5,16 +5,15 @@ const lightbox = document.querySelector('.lightbox');
 let dataList = []; // tableau pour stocker les datas relatives aux photos
 
 // OUVERTURE DE LA LIGHTBOX
+// On s'assure que le script s'initialise correctement et ré-attache les event listeners quand la requête AJAX est terminée.
 documentReady();
-
-// Quand la requête AJAX termine 
 jQuery(document).ajaxComplete(function() {
     dataList = []; // on vide les tableaux pour recommencer
     IconFullList = [];
     documentReady(); // recharge l'événement document ready pour rebrancher les événements au click
 })
    
-// FONCTIONS UTILISÉES CI-DESSUS
+// FONCTIONS UTILISÉES POUR L'OUVERTURE DE A LIGHTBOX
 // Fonction appelée initialement et à chaque fois que la requête AJAX se termine (encapsule le code à exécuter lorsque le document est prêt).
 function documentReady() {
     jQuery(document).ready(function ($) { // méthode jQuery qui attend que le document HTML soit complètement chargé avant d'exécuter la fonction init.
@@ -53,3 +52,13 @@ function init($) {
      });
    });
 }
+
+
+// FERMETURE DE LA LIGHTBOX
+
+function closeLightbox() {
+    lightboxModal.style.display = "none";
+}
+
+closeButtonLightbox.addEventListener("click", closeLightbox);
+

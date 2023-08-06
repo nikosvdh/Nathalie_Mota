@@ -1,3 +1,4 @@
+/* on cache la lightbox par défaut */
 .lightbox {
     display: none;
     position: fixed;
@@ -11,20 +12,43 @@
     animation: slide-down 1s ease;
 }
 
+/* quand la classe "active" est ajoutée via JS, la lightbox devient visible */
 .active {
     opacity: 1;
     visibility: visible;
 }
 
+/* contenu de la lightbox */
 .lightbox-div {
     width: 80%;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     justify-content: center;
     align-items: center;
 }
 
 .lightbox-info {
     width: 100%;
+}
+
+/* crossmark */
+.close-lightbox {
+    background: none;
+    border: none;
+    width: 1.8em;
+    height: 1.8em;
+    margin-left: 92%;
+    padding-top: 5%;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.close-lightbox>img {
+    position: fixed;
+    transition: transform .5s ease-in-out;
+}
+
+.close-lightbox>img:hover {
+    transform: rotate(90deg);
 }

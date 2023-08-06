@@ -15,7 +15,7 @@
             <?php if (has_post_thumbnail()) : ?>
             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title_attribute(); ?>"
                 class="post-thumbnail" />
-            <div>
+            <div class="lightbox-div-info">
                 <p class="lightbox-reference"></p>
                 <p class="lightbox-category"></p>
             </div>
