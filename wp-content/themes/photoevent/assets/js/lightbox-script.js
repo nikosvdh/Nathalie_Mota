@@ -5,7 +5,6 @@ const lightbox = document.querySelector('.lightbox');
 let dataList = []; // tableau pour stocker les datas relatives aux photos
 
 // OUVERTURE DE LA LIGHTBOX
-
 documentReady();
 
 // Quand la requête AJAX termine 

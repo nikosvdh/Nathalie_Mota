@@ -11,7 +11,7 @@
     </button>
 
     <div class="lightbox-div">
-        <div>
+        <div class="lightbox-info">
             <?php if (has_post_thumbnail()) : ?>
             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title_attribute(); ?>"
                 class="post-thumbnail" />
