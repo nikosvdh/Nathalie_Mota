@@ -8,10 +8,10 @@ $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'custom-size');
 // Récupération de l'attribut alt de l'image
 $thumbnail_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
 
-// Récupération du titre du post
-$article_title = get_the_title();
+// Récupérer la référence de l'article
+$article_reference = get_field('reference');
 
-// Récupération des catégories du post
+// Récupération de la catégorie de l'article
 $categories = get_terms(array(
     'taxonomy' => 'categories',
     'hide_empty' => false,
@@ -24,20 +24,21 @@ $categories = get_terms(array(
     <div class="gallery-img">
         <img id="img-full" class="img-full" src="<?php echo $thumbnail_url[0]; ?>" alt="<?php echo $thumbnail_alt; ?>"
             title="<?php echo $article_title; ?>" data-src-full="<?php the_post_thumbnail_url() ?>">
-        <div>
+        <div class="gallery-icons-hover">
             <a href="#">
                 <img class="icon-full"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/Icon_fullscreen.png"
                     alt="Icône plein écran" />
             </a>
             <a href="<?php echo get_post_permalink(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Icon_eye.png" alt="Icône oeil" />
+                <img class="icon-eye" src="<?php echo get_template_directory_uri(); ?>/assets/images/Icon_eye.png"
+                    alt="Icône oeil" />
             </a>
 
             <div class="gallery-data" data-year=<?php $post_date = get_the_date('Y');
                 echo $post_date; ?>>
-                <p class="gallery-title"><?php echo $article_title; ?></p>
-                <p class="gallery-category"><?php echo the_terms(get_the_ID(), 'categories', false); ?></p>
+                <p class="gallery-reference"><?php echo $article_reference;?></p>
+                <p class="gallery-category"><?php echo the_terms(get_the_ID(), 'categorie', false); ?></p>
             </div>
         </div>
     </div>

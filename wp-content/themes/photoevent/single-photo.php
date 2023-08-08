@@ -35,7 +35,7 @@ while ( have_posts() ) :
             </li>
         </div>
 
-        <div class='gallery-img part'>
+        <div class='gallery-img part pic-container'>
             <?php get_template_part( 'template-parts/content', "image"); ?>
         </div>
     </ul>
@@ -50,7 +50,7 @@ endwhile; // End of the loop.
 <div class="is-interested">
     <div class="is-interested-text-button">
         <p class="is-interested-text">Cette photo vous intéresse ?</p>
-        <button class="button">Contact</button>
+        <button class="button modal-js">Contact</button>
     </div>
 
     <div class="is-interested-slider">

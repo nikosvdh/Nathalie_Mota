@@ -23,14 +23,25 @@
     width: 80%;
     margin: auto;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.post-thumbnail {
+    height: 82vh;
+    width: 100%;
+    margin: auto;
 }
 
 .lightbox-info {
     width: 100%;
 }
+
+/*
+.lightbox-div { 
+}
+*/
 
 /* crossmark */
 .close-lightbox {
@@ -52,3 +63,25 @@
 .close-lightbox>img:hover {
     transform: rotate(90deg);
 }
+
+.previous-pic-lightbox,
+.next-pic-lightbox {
+  background: none;
+  border: none;
+  position: relative;
+  top: 50%;
+  width: 10%;
+  z-index: 11;
+  cursor: pointer; 
+}
+
+.next-pic-lightbox {
+    margin-left: 90%;
+}
+
+.previous-pic-lightbox{
+    width: 9%;
+    position: relative;
+    top: 52%;
+}
+

@@ -138,7 +138,6 @@
 
 .gallery-container { /*used for home page too */
     max-width: 1148px;
-    margin: auto;
     padding: 20px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -149,3 +148,4 @@
     background-color: black;
     color: white;
 }
+
