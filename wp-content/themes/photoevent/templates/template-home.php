@@ -37,7 +37,7 @@
 
 <section class="gallery">
 
-    <div>
+    <div class="filters-container">
         <!-- Fonction pour récupéter et afficher les catégories -->
 
         <?php function showCategories($taxonomy)
@@ -54,12 +54,12 @@
 
         ?>
 
-        <div>
+        <div class="category-format-filters">
 
             <!-- Filter Categories -->
 
             <div>
-                <form>
+                <form class="filter-column">
                     <select id="categories">
                         <option value="all" hidden></option>
                         <option value="all" selected>CATÉGORIES</option>
@@ -78,8 +78,8 @@
 
             <!-- Filter Formats -->
 
-            <div>
-                <form>
+            <div class="formats-filter">
+                <form class="filter-column">
                     <select id="formats">
                         <option value="all" hidden></option>
                         <option value="all" selected>FORMATS</option>
@@ -102,7 +102,7 @@
         <!-- Filter Sort By Date -->
 
         <div>
-            <form>
+            <form class="filter-column">
                 <select id="sort-by-date">
                     <option value="all" hidden></option>
                     <option value="all" selected>TRIER PAR</option>

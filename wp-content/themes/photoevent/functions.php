@@ -72,8 +72,6 @@ function showTaxonomies($taxonomy)
 
 function filters_images()
 {
-    $selectedCategory = $_POST['selectedCategory'];
-    $selectedFormat = $_POST['selectedFormat'];
     $args = array(
         'post_type' => 'photo',
         'posts_per_page' => 12,
@@ -104,6 +102,14 @@ function filters_images()
     show_gallery($query, true);
 
     wp_die();
+
+    wp_reset_query(); // on réinitialise la requête
+    wp_reset_postdata(); // on réinitialise les données
+
+    $response = ob_get_clean(); // on récupère le contenu de la mise en mémoire tampon
+
+    echo $response;
+    exit;
 };
 add_action('wp_ajax_nopriv_filters_images', 'filters_images');
 add_action('wp_ajax_filters_images', 'filters_images');

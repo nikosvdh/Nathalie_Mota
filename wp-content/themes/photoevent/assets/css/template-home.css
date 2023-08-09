@@ -111,3 +111,35 @@
     opacity: 1;
 }
 
+/* filtres */
+
+.filters-container {
+    max-width: 1148px;
+    padding-bottom: 4.6em;
+    margin: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.category-format-filters {
+    width: 37vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.formats-filter {
+    padding-left: 20px;
+}
+
+#formats,#categories, #sort-by-date {
+    font-family: 'Poppins';
+    font-size: 0.8em;
+    border: 1px solid #c4c4c4;
+    width: 17em;
+}
+
+.filter-column select {
+    border-radius: 4px;
+}
