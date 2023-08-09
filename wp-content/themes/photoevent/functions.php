@@ -47,8 +47,7 @@ function show_gallery($ajaxposts)
     while ($ajaxposts->have_posts()) :
         $ajaxposts->the_post();
 
-        // Resize (500*500px) et récupération de l'image mise en avant dans le post
-        add_image_size('custom-size', 500, 500, true);
+        // récupération de l'image du post
 
         get_template_part('template-parts/content', 'image');
 
@@ -82,14 +81,14 @@ function filters_images()
                 'relation' => 'AND',
                 $_POST['selectedCategory'] != "all" ?
                     array(
-                        'taxonomy' => 'categories',
+                        'taxonomy' => 'categorie',
                         'field' => 'slug',
                         'terms' => $_POST['selectedCategory'],
                     )
                     : '',
                 $_POST['selectedFormat'] != "all" ?
                     array(
-                        'taxonomy' => 'formats',
+                        'taxonomy' => 'format',
                         'field' => 'slug',
                         'terms' => $_POST['selectedFormat'],
                     )
@@ -110,7 +109,7 @@ function filters_images()
 
     echo $response;
     exit;
-};
+}
 add_action('wp_ajax_nopriv_filters_images', 'filters_images');
 add_action('wp_ajax_filters_images', 'filters_images');
 

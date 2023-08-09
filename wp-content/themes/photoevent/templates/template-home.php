@@ -65,7 +65,7 @@
                         <option value="all" selected>CATÉGORIES</option>
                         <?php
                         $categories = get_terms(array(
-                            "taxonomy" => "categorie",
+                            "taxonomy" => "categorie", // as in CPT UI
                             "hide_empty" => false,
                         ));
                         foreach ($categories as $categorie) {
@@ -85,7 +85,7 @@
                         <option value="all" selected>FORMATS</option>
                         <?php
                         $formats = get_terms(array(
-                            "taxonomy" => "format",
+                            "taxonomy" => "format", // as in CPT UI
                             "hide_empty" => false,
                         ));
                         foreach ($formats as $format) {
@@ -109,11 +109,9 @@
                     <option value="DESC">Les plus récentes</option>
                     <option value="ASC">Les plus anciennes</option>
                 </select>
+            </form>
         </div>
-        </form>
     </div>
-    </div>
-
 
     <!-- PICTURES LIST  -->
 
