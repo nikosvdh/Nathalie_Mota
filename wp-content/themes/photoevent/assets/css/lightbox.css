@@ -43,6 +43,18 @@
 }
 */
 
+.lightbox-div-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.lightbox-reference, .lightbox-category {
+    color: white;
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+
 /* crossmark */
 .close-lightbox {
     background: none;
@@ -64,6 +76,7 @@
     transform: rotate(90deg);
 }
 
+/* navigation lightbox */
 .previous-pic-lightbox,
 .next-pic-lightbox {
   background: none;
