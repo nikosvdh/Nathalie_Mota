@@ -83,8 +83,10 @@ jQuery(document).ready(function($) {
 jQuery(document).ready(function($) {
     // Écoutez l'événement de changement sur le Select2
     $('#categories, #formats, #sort-by-date').on('change', function() {
-        var arrow = $('.select2-selection__arrow');
-        if ($(this).val()) {
+        var selectedValue = $(this).val();
+        var arrow = $(this).closest('.filter-column').find('.select2-selection__arrow');
+      
+        if (selectedValue && selectedValue !== 'all') {
             arrow.addClass('flipped'); // Ajoutez la classe lorsqu'un filtre est sélectionné
         } else {
             arrow.removeClass('flipped'); // Retirez la classe si aucun filtre n'est sélectionné
