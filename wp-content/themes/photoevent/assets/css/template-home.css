@@ -133,7 +133,7 @@
     padding-left: 30px;
 }
 
-.select2-results__option:hover
+.select2-results__option:not(:empty):hover
 {
     background-color: red;
     color: white;
@@ -201,8 +201,22 @@
 .select2-selection__arrow.flipped::before {
     content: "\2335";
     transform: rotate(180deg); /* Inversez la rotation de la flèche */
-    margin-top: 0px;
+    margin-top: 15px;
 }
+
+/* Mettre en majuscules le texte des options sélectionnées */
+.select2-selection__rendered {
+    text-transform: uppercase;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 18px !important;
+}
+
+
+
+
+
 
 
 
