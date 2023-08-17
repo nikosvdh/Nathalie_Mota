@@ -73,7 +73,7 @@
 }
 
 .close-lightbox>img:hover {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 
 /* navigation lightbox */

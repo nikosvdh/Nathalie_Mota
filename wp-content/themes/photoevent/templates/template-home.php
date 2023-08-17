@@ -69,7 +69,7 @@
                             "hide_empty" => false,
                         ));
                         foreach ($categories as $categorie) {
-                            echo '<option value="' . $categorie->slug . '">' . $categorie->name . '</option>';
+                            echo '<option value="' . $categorie->slug . '">' . mb_convert_case($categorie->name, MB_CASE_TITLE, "UTF-8") . '</option>';
                         }
                         ?>
                     </select>
@@ -89,7 +89,7 @@
                             "hide_empty" => false,
                         ));
                         foreach ($formats as $format) {
-                            echo '<option value="' . $format->slug . '">' . $format->name . '</option>';
+                            echo '<option value="' . $format->slug . '">' . mb_convert_case($format->name, MB_CASE_TITLE, "UTF-8") . '</option>';
                         }
                         ?>
                     </select>
@@ -106,8 +106,8 @@
                 <select id="sort-by-date">
                     <option value="all" hidden></option>
                     <option value="all" selected>TRIER PAR</option>
-                    <option value="DESC">Les plus récentes</option>
-                    <option value="ASC">Les plus anciennes</option>
+                    <option value="DESC">Les Plus Récentes</option>
+                    <option value="ASC">Les Plus Anciennes</option>
                 </select>
             </form>
         </div>

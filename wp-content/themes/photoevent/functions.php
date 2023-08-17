@@ -81,14 +81,14 @@ function filters_images()
                 'relation' => 'AND',
                 $_POST['selectedCategory'] != "all" ?
                     array(
-                        'taxonomy' => 'categorie',
+                        'taxonomy' => 'categorie', // as in CPT UI
                         'field' => 'slug',
                         'terms' => $_POST['selectedCategory'],
                     )
                     : '',
                 $_POST['selectedFormat'] != "all" ?
                     array(
-                        'taxonomy' => 'format',
+                        'taxonomy' => 'format', // as in CPT UI
                         'field' => 'slug',
                         'terms' => $_POST['selectedFormat'],
                     )
@@ -112,6 +112,25 @@ function filters_images()
 }
 add_action('wp_ajax_nopriv_filters_images', 'filters_images');
 add_action('wp_ajax_filters_images', 'filters_images');
+
+
+// Branchement de Select2
+function select2_enqueue_scripts() 
+{
+    wp_enqueue_style ( 
+      'select2',  
+      'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css' 
+    );
+  
+    wp_enqueue_script ( 
+      'select2',  
+      'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', 
+      array('jquery'), 
+      '4.1.0-rc.0', 
+      true 
+    );
+}
+add_action( 'wp_enqueue_scripts', 'select2_enqueue_scripts' );
 
 
 // REQUÊTE AJAX POUR CHARGER PLUS DE CONTENU SUR LA PAGE D'ACCUEIL (PAGINATION)

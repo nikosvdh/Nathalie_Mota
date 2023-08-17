@@ -82,6 +82,12 @@
     align-items: center;
     width: 272px;
     height: 50px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.button:hover {
+    background-color: black;
+    color: white
 }
 
 .is-interested-slider {
@@ -144,8 +150,5 @@
     grid-gap: 20px;
 }
 
-.button:hover { /*used for home page too */
-    background-color: black;
-    color: white;
-}
+
 

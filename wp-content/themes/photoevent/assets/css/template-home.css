@@ -72,8 +72,8 @@
 
 .gallery-icons-hover .icon-eye {
     position: relative;
-    top: 51%;
-    left: 49%;
+    top: 55%;
+    left: 5%;
 }
 
 .gallery-icons-hover img {
@@ -115,8 +115,8 @@
 
 .filters-container {
     max-width: 1148px;
-    padding-bottom: 4.6em;
-    margin: 0 8%;
+    padding-bottom: 1em;
+    padding-top: 2em;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -130,16 +130,80 @@
 }
 
 .formats-filter {
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
-#formats,#categories, #sort-by-date {
+.select2-results__option:hover
+{
+    background-color: red;
+    color: white;
+}
+
+.select2-selection--single
+{
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
     font-family: 'Poppins';
     font-size: 0.8em;
-    border: 1px solid #c4c4c4;
-    width: 17em;
+    padding-top: 15px;
 }
 
-.filter-column select {
-    border-radius: 4px;
+.select2-container--fluid {
+    width: 100% !important; /* Forcer la largeur à 100% */
 }
+
+.filter-column {
+    font-family: 'Poppins';
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.select2-container .select2-selection--single {
+    height: 43px !important;
+    width: 260px !important;
+}
+
+.select2-search--dropdown {
+    display: none !important;
+}
+
+.select2-container--open .select2-dropdown--below {
+    border: none;
+    margin-left: 2.3vw;
+}
+
+.select2-results__options {
+    margin-top: 30px !important;
+}
+
+/* Styles pour la flèche de sélection dans le dropdown Select2 */
+.select2-selection__arrow {
+    width: 1em; 
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end !important;
+    pointer-events: none;
+    background-color: transparent; 
+    z-index: 1; /* la flèche est au-dessus du contenu */
+}
+
+/* Style de l'icône de la flèche */
+.select2-selection__arrow::before {
+    content: "\2335";
+    font-size: 1.6em;
+    padding-right: 5px;
+}
+
+/* inverser la flèche */
+.select2-selection__arrow.flipped::before {
+    content: "\2335";
+    transform: rotate(180deg); /* Inversez la rotation de la flèche */
+    padding-left: 5px;
+}
+
+
+
+
