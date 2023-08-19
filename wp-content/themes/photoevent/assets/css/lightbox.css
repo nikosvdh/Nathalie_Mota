@@ -49,10 +49,15 @@
     justify-content: space-between;
 }
 
-.lightbox-reference, .lightbox-category {
+.lightbox-reference {
     color: white;
     font-family: 'Poppins';
     font-size: 14px;
+}
+.lightbox-category {
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    color: white;
 }
 
 /* crossmark */
@@ -82,19 +87,52 @@
   background: none;
   border: none;
   position: relative;
-  top: 50%;
+  top: 44.25%;
   width: 10%;
   z-index: 11;
   cursor: pointer; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-family: "Space Mono", monospace;
 }
 
 .next-pic-lightbox {
     margin-left: 90%;
+    top: 42.25%;
 }
 
-.previous-pic-lightbox{
-    width: 9%;
+.previous-pic-lightbox {
+    width: 10%;
     position: relative;
-    top: 52%;
 }
+
+.previous-pic-lightbox span {
+    margin-left: 10px;
+}
+
+.next-pic-lightbox span {
+    margin-right: 10px;
+}
+
+.previous-pic-lightbox:hover, .next-pic-lightbox:hover {
+    font-weight: 600;
+}
+
+
+.previous-pic-lightbox,
+.next-pic-lightbox {
+    transition: transform 0.3s ease-out; /* transition pour mise à l'échelle pendant 0,3s */
+}
+
+/* on agrandit les boutons au survol */
+.previous-pic-lightbox:hover,
+.next-pic-lightbox:hover {
+    transform: scale(1.15); /* 15% */
+}
+
+
+
 
