@@ -66,31 +66,30 @@ jQuery(document).ready(function($) {
 });
 
 jQuery(document).ready(function($) {
-    // Sélectionnez le troisième champ select
+    // Sélection du troisième champ select
     var $thirdSelect = $('#sort-by-date');
   
-    // Ajoutez une classe CSS personnalisée au conteneur Select2 du troisième select
+    // Ajout d'une classe CSS personnalisée au conteneur Select2 du troisième select
     $thirdSelect.next('.select2-container').addClass('sort-by-date-container');
   
-    // Déplacez le champ select vers la droite en ajoutant des styles CSS à la classe personnalisée
+    // Déplacement du champ select vers la droite en ajoutant des styles CSS à la classe personnalisée
     $('.sort-by-date-container .select2-selection').css({
       'float': 'right',
-      'margin-right': '10px'
+      'margin-right': '25px'
     });
 });
 
 
 jQuery(document).ready(function($) {
-    // Écoutez l'événement de changement sur le Select2
+    // On écoute l'événement de changement sur le Select2
     $('#categories, #formats, #sort-by-date').on('change', function() {
         var selectedValue = $(this).val();
         var arrow = $(this).closest('.filter-column').find('.select2-selection__arrow');
       
         if (selectedValue && selectedValue !== 'all') {
-            arrow.addClass('flipped'); // Ajoutez la classe lorsqu'un filtre est sélectionné
+            arrow.addClass('flipped'); // On ajoute la classe lorsqu'un filtre est sélectionné
         } else {
-            arrow.removeClass('flipped'); // Retirez la classe si aucun filtre n'est sélectionné
-            //console.log('Class removed'); // Check if class is removed
+            arrow.removeClass('flipped'); // On retire la classe si aucun filtre n'est sélectionné
         }
     });
 });

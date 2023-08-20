@@ -15,7 +15,7 @@
 }
 
 @font-face {
-    font-family: 'space-mono-regular';
+    font-family: 'space-mono';
     src: url('../fonts/space-mono/SpaceMono-Regular.woff') format('woff'),
         url('../fonts/space-mono/SpaceMono-Regular.woff2') format('woff2');
     font-weight: normal;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-    font-family: 'poppins-light';
+    font-family: 'poppins';
     src: url('../fonts/poppins/Poppins-Light.woff') format('woff'),
         url('../fonts/poppins/Poppins-Light.woff2') format('woff2');
     font-weight: normal;

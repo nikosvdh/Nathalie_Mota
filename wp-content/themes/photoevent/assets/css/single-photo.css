@@ -122,7 +122,7 @@
     padding-bottom: 35px;
 }
 
-.button-container{
+.button-container { 
     margin: 0 10%;
     display: flex;
     justify-content: center;
@@ -140,6 +140,8 @@
     margin: 0 10%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery-container { /*used for home page too */
@@ -147,7 +149,7 @@
     padding: 20px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 20px;
+    gap: 20px;
 }
 
 

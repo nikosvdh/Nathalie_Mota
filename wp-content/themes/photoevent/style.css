@@ -23,8 +23,7 @@ li {
     align-items: center;
 }
 
-html{
-    max-width: 1440px;
+html {
     margin: auto;
 }
 
@@ -32,3 +31,4 @@ img {
     max-width: 100%;
     object-fit: cover;
 }
+

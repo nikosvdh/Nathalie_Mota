@@ -13,7 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
 }
 
 .hero > img {
@@ -115,15 +114,14 @@
 
 .filters-container {
     max-width: 1148px;
-    padding-bottom: 1em;
-    padding-top: 2em;
+    padding-bottom: 1.5em;
+    padding-top: 6em;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .category-format-filters {
-    width: 37vw;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -145,7 +143,7 @@
     border-radius: 8px;
     font-family: 'Poppins';
     font-size: 0.8em;
-    padding-top: 15px;
+    padding-top: 12px;
 }
 
 .select2-container--fluid {
@@ -153,8 +151,6 @@
 }
 
 .filter-column {
-    font-family: 'Poppins';
-    font-size: 1em;
     display: flex;
     flex-direction: column;
 }
@@ -175,11 +171,12 @@
 
 .select2-results__options {
     margin-top: 30px !important;
+    font-family: "Poppins";
+    font-size: 13px;
 }
 
 /* Styles pour la flèche de sélection dans le dropdown Select2 */
 .select2-selection__arrow {
-    width: 18em;
     height: 100%;
     position: relative;
     display: flex;
@@ -188,13 +185,14 @@
     pointer-events: none;
     background-color: transparent; 
     z-index: 1; /* la flèche est au-dessus du contenu */
-    margin-top: -25px;
+    margin-top: -30px;
+    padding-right: 20px;
 }
 
 /* Style de l'icône de la flèche */
 .select2-selection__arrow::before {
     content: "\2335";
-    font-size: 1.6em;
+    font-size: 1.7em;
 }
 
 /* inverser la flèche */
@@ -213,7 +211,11 @@
     padding-left: 18px !important;
 }
 
-
+.button-container-home { 
+    margin: 30px 10%;
+    display: flex;
+    justify-content: center;
+}
 
 
 

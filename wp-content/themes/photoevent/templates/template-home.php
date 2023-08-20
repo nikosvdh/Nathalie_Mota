@@ -133,7 +133,7 @@
 
     <!-- PAGINATION-->
 
-    <div class="button-container">
+    <div class="button-container-home">
         <a id="load-more" data-current-index="1" href="#!"><button class="button">Charger plus</button></a>
     </div>
 </section>
