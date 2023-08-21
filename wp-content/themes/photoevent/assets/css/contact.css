@@ -24,9 +24,10 @@
   animation: slide-down 1s ease;
 }
 
+/* Formulaire de contact */
 #wpforms-form-22 .wpforms-field-label  {
-  font-family: 'Poppins';
-  font-size: 14px;
+  font-family: 'poppins';
+  font-size: 13px;
   line-height: 21px;
   font-weight: 500;
   margin: 2px !important;
@@ -54,7 +55,7 @@
   border: transparent;
   border-radius: 2px;
   font-family: 'space-mono';
-  font-size: 14px;
+  font-size: 13px;
   box-shadow: none;
   padding: 8px 15px 8px 15px;
   cursor: pointer;
@@ -70,4 +71,16 @@
 #wpforms-submit-22:hover {
   background-color: black;
   color: white;
+}
+
+#wpforms-22-field_0, #wpforms-22-field_1, #wpforms-22-field_2, #wpforms-22-field_3 {
+  border-radius: 10px;
+}
+
+#wpforms-22-field_2 {
+  height: 210px;
+}
+
+.img-contact {
+  padding-top: 10px;
 }

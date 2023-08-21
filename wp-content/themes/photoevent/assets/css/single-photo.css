@@ -1,6 +1,6 @@
 .info-pic {
     font-family: 'space-mono';
-    font-size: 0.87em;
+    font-size: 0.875em;
     letter-spacing: 0.1em;
     line-height: 21px;
     margin: 0 10%;
@@ -145,11 +145,11 @@
 }
 
 .gallery-container { /*used for home page too */
-    max-width: 1148px;
+    max-width: 1250px;
     padding: 20px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;
+    gap: 20px; /* Écart horizontal */
 }
 
 

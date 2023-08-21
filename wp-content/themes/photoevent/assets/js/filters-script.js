@@ -74,9 +74,7 @@ jQuery(document).ready(function($) {
   
     // Déplacement du champ select vers la droite en ajoutant des styles CSS à la classe personnalisée
     $('.sort-by-date-container .select2-selection').css({
-      'float': 'right',
-      'margin-right': '25px'
-    });
+      'float': 'right'    });
 });
 
 
