@@ -15,6 +15,7 @@
 
 header {
   margin: 0;
+  box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.09);
 }
 
 .logo {
@@ -153,38 +154,68 @@ header {
         }
     } 
   
+
 /* MEDIA QUERIES */
-
-@media all and (max-width: 770px) {
+/* TABLETTE */
+@media all and (max-width: 768px) {
   .navbar .menu-item {
-      font-size: 16px;
-      padding-left: 1em;
+    font-size: 15px;
+    padding-left: 1em;
   }
 
   .logo {
-      max-width: 85%;
+    max-width: 85%;
+  }
+
+  .header-container {
+    margin-right: 50px;
+    margin-left: 50px;
+  }  
+}
+
+/* MOBILE */
+@media all and (min-width: 768px) {
+  .menu-toggle, .open_nav {
+    display: none;
   }
 }
 
-@media all and (max-width: 620px) {
-    .nav-desktop{
-        display: none;
-    }
+@media all and (max-width: 767px) {
+  .nav-desktop{
+    display: none;
+  }
 
-    #myBtn, .accueil-menu-item > a, .apropos-menu-item > a {
-      color: white;
-      font-size: 1.43em;
+  .menu-toggle {
+    top: 70px;
+    right: 7%;
+  }
+
+  #myBtn, .accueil-menu-item > a, .apropos-menu-item > a {
+    color: white;
+    font-size: 1.43em;
   }
 }
 
-@media all and (min-width: 620px) {
-    .menu-toggle, .open_nav {
-        display: none;
-    }
-}
-
-@media all and (max-width: 480px) {
+@media all and (max-width: 425px) {
   .logo {
-      width: 70%;
+    width: 70%;
+  }
+  .menu-toggle {
+    right: 12%;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .logo {
+    width: 65%;
+  }
+  .menu-toggle {
+    right: 14%;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .menu-toggle {
+    right: 16%;
   }
 }

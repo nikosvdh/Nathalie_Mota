@@ -1,10 +1,8 @@
 .info-pic {
     font-family: 'space-mono';
-    font-size: 0.875em;
     letter-spacing: 0.1em;
-    line-height: 21px;
-    margin: 0 10%;
-    height: 52.8em;
+    margin: 40px 10%;
+    height: 52.75em;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -14,8 +12,11 @@
 .info {
     min-width: 50%;
     margin-right: 3%;
-    padding-bottom: 43px;
     border-bottom: 1px solid;
+}
+
+.year {
+    padding-bottom: 30px;
 }
 
 .part {
@@ -27,11 +28,16 @@
     font-size: 4.1em;
     font-weight: 400;
     line-height: 58px;
-    padding-bottom: 20px;    
+    width: 450px;
+    padding-top: 30px;
 }
 
 .info-margin {
-    margin: 4px 0px;
+    margin: 10px 0px;
+}
+
+.ref {
+    margin-top: -30px;
 }
 
 .gallery-img {
@@ -49,7 +55,8 @@
     font-family: 'poppins';
     font-weight: 300;
     font-size: 14px;
-    padding-right: 1.75em;
+    line-height: 21px;
+    padding-right: 9.3em;
 }
 
 .is-interested {
@@ -59,6 +66,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -40px;
 }
 
 .is-interested-text-button {
@@ -118,8 +126,9 @@
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.1em;
-    padding-top: 77px;
-    padding-bottom: 35px;
+    line-height: 26.66px;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 
 .button-container { 
@@ -129,14 +138,24 @@
 }
 
 .all-pics-button {
-    margin-top: 5em;
-    margin-bottom: 5.6em;
+    margin-top: 2.5em;
+    margin-bottom: 3em;
 }
 
 
 /* Gallery single page */
 
-.gallery { /*used for home page too */
+.gallery {  
+    margin: 0 10%;
+   display: flex;
+    flex-direction: column;
+    /*  justify-content: center;
+    align-items:center;*/
+}
+
+
+
+.gallery-home {  
     margin: 0 10%;
     display: flex;
     flex-direction: column;
@@ -151,6 +170,5 @@
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px; /* Écart horizontal */
 }
-
 
 

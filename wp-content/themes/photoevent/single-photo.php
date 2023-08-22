@@ -31,7 +31,7 @@ while ( have_posts() ) :
                 <p class="info-margin">TYPE : <?php echo get_field('type'); ?></p>
             </li>
             <li>
-                <p class="info-margin">ANNÉE : <?php echo get_the_date('Y'); ?></p>
+                <p class="info-margin year">ANNÉE : <?php echo get_the_date('Y'); ?></p>
             </li>
         </div>
 

@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8); /* fond noir transparent à 80% */
     overflow: auto;
     z-index: 10;
     animation: slide-down 1s ease;
@@ -37,11 +37,6 @@
 .lightbox-info {
     width: 100%;
 }
-
-/*
-.lightbox-div { 
-}
-*/
 
 .lightbox-div-info {
     display: flex;
@@ -81,14 +76,14 @@
     transform: rotate(180deg);
 }
 
-/* navigation lightbox */
+/* navigation */
 .previous-pic-lightbox,
 .next-pic-lightbox {
   background: none;
   border: none;
   position: relative;
-  top: 44.25%;
-  width: 10%;
+  top: 44.45%;
+  width: 10.5%;
   z-index: 11;
   cursor: pointer; 
   display: flex;
@@ -100,13 +95,8 @@
 }
 
 .next-pic-lightbox {
-    margin-left: 90%;
+    margin-left: 89%;
     top: 42.25%;
-}
-
-.previous-pic-lightbox {
-    width: 10%;
-    position: relative;
 }
 
 .previous-pic-lightbox span {
@@ -130,4 +120,29 @@
 .previous-pic-lightbox:hover,
 .next-pic-lightbox:hover {
     transform: scale(1.15); /* 15% */
+}
+
+
+/* Media Queries */
+/* navigation */
+@media all and (max-width: 1024px) {
+  
+    .previous-pic-lightbox span {
+        margin-left: 3px;
+        font-size: 8.5px;
+    }
+    
+    .next-pic-lightbox span {
+        margin-right: 3px;
+        font-size: 8.5px;
+    }
+
+    .next-pic-lightbox span:hover, .previous-pic-lightbox span:hover {
+        font-size: 9.5px;
+    }
+
+    .previous-pic-lightbox:hover,
+    .next-pic-lightbox:hover {
+        transform: scale(1.05); /* 5% */
+    }
 }

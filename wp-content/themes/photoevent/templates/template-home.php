@@ -35,7 +35,7 @@
     ?>
 </div>
 
-<section class="gallery">
+<section class="gallery-home">
 
     <div class="filters-container">
         <!-- Fonction pour récupéter et afficher les catégories -->
@@ -101,7 +101,7 @@
 
         <!-- Filter Sort By Date -->
 
-        <div>
+        <div class="sort-by-date-filter">
             <form class="filter-column">
                 <select id="sort-by-date">
                     <option value="all" hidden></option>
