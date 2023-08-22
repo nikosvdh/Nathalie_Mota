@@ -123,26 +123,61 @@
 }
 
 
-/* Media Queries */
-/* navigation */
+/* Media Queries navigation */
 @media all and (max-width: 1024px) {
-  
     .previous-pic-lightbox span {
         margin-left: 3px;
         font-size: 8.5px;
     }
-    
     .next-pic-lightbox span {
         margin-right: 3px;
         font-size: 8.5px;
     }
-
     .next-pic-lightbox span:hover, .previous-pic-lightbox span:hover {
         font-size: 9.5px;
     }
-
     .previous-pic-lightbox:hover,
     .next-pic-lightbox:hover {
         transform: scale(1.05); /* 5% */
+    }
+}
+
+/* tablette */
+@media all and (max-width: 768px) {
+    .previous-pic-lightbox span,  .next-pic-lightbox span {
+        display: none;
+    }
+    .previous-pic-lightbox:hover,
+    .next-pic-lightbox:hover {
+        transform: scale(1.2); /* 20% */
+    }
+    .close-lightbox {
+        padding-top: 12.5%;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .close-lightbox {
+        padding-top: 16%;
+        margin-left: 87%;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .close-lightbox {
+        padding-top: 22.5%;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .close-lightbox {
+        padding-top: 25%;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .close-lightbox {
+        padding-top: 29%;
+        margin-left: 85%;
     }
 }
