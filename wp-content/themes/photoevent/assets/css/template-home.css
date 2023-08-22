@@ -257,8 +257,11 @@
     .sort-by-date-filter {
        display: none;
     }
+    .categories-filter {
+        padding-left: 30px;
+    }
     .formats-filter {
-        padding-left: 50px;
+        padding-left: 25px;
     }
 }
 
@@ -293,6 +296,10 @@
     .gallery-img {
         min-height: 220px;
     }
+    .select2-container .select2-selection--single {
+        width: 243.20px !important;
+    }
+    
 }
 
   

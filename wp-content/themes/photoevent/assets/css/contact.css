@@ -56,7 +56,7 @@
   border-radius: 2px;
   font-family: 'space-mono';
   font-size: 13px;
-  box-shadow: none;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.0004);
   padding: 8px 15px 8px 15px;
   cursor: pointer;
   position: relative;

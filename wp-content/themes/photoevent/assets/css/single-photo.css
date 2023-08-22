@@ -81,7 +81,7 @@
     border-radius: 2px;
     font-family: 'space-mono';
     font-size: 14px;
-    box-shadow: none;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.0004);
     padding: 8px 15px 8px 15px;
     cursor: pointer;
     position: relative;
@@ -172,3 +172,87 @@
 }
 
 
+
+/* Media Queries */
+/* Tablette */
+@media all and (max-width: 768px) {
+    .info-pic {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        height: inherit;
+    }
+
+    .info {
+        border: none;
+    }
+
+    .pic-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-pic {
+        padding-top: inherit;
+    }
+
+    .is-interested-slider {
+        display: none;
+    }
+
+    .is-interested-text-button {
+        flex-direction: column;
+    } 
+
+    .is-interested-text {
+        padding-left: 7.65vh;
+    }
+
+    .is-interested {
+        margin: 0;
+        border-top: 1px solid black;
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .you-may-also-like {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .button-container {
+        display: none;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .title-pic {
+        width: inherit;
+        font-size: 3em;
+    }
+    .info-margin {
+        font-size: 0.875em;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .is-interested-text {
+       font-size: 0.813em;
+       padding-left: 5vh;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .is-interested-text {
+       font-size: 0.688em;
+       padding-left: inherit;
+    }
+
+    .is-interested-text-button .button {
+        width: 263px;
+    }
+}

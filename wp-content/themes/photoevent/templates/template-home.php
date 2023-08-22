@@ -58,7 +58,7 @@
 
             <!-- Filter Categories -->
 
-            <div>
+            <div class="categories-filter">
                 <form class="filter-column">
                     <select id="categories">
                         <option value="all" hidden></option>
