@@ -273,6 +273,9 @@
     .formats-filter {
         display: none;
      }
+    .categories-filter {
+        padding-left: 0;
+    }
     .filters-container {
         padding-top: 2.5em;
     }

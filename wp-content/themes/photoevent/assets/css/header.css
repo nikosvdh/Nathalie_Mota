@@ -62,10 +62,10 @@ header {
   .open_nav {
     background-color: #E00000; 
     position: absolute;
-    top: 88px;
-    height: 115vw;
-    width: 78vw;
-    padding-top: 40px;
+    top: 19%;
+    height: 98vw;
+    width: 98vw;
+    padding-top: 200px;
     z-index: 100;
   }
   
@@ -94,12 +94,12 @@ header {
   }
   
   .main-navigation .line {
-      height: 2px;
-      background-color: #000;
-      display: block;
-      margin: auto;
-      margin-block: -2px;
-      width: 2.5em;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    margin: auto;
+    margin-block: -2px;
+    width: 2.5em;
     z-index: 9999;
     position:relative;
     transition: all .5s ease-in-out;
@@ -192,7 +192,8 @@ header {
 
   #myBtn, .accueil-menu-item > a, .apropos-menu-item > a {
     color: white;
-    font-size: 1.43em;
+    font-size: 3em;
+    padding: 10px;
   }
 }
 
@@ -203,6 +204,11 @@ header {
   .menu-toggle {
     right: 12%;
   }
+  .open_nav {
+    height: 150vw;
+    width: 96.5vw;
+    padding-top: 200px;
+  }
 }
 
 @media all and (max-width: 375px) {
@@ -212,10 +218,18 @@ header {
   .menu-toggle {
     right: 14%;
   }
+  .open_nav {
+    width: 96vw;
+    height: 160vw;
+  }
 }
 
 @media all and (max-width: 320px) {
   .menu-toggle {
     right: 16%;
+  }
+  .open_nav {
+    height: 175vw;
+    width: 95vw;
   }
 }

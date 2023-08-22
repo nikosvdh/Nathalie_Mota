@@ -84,3 +84,53 @@
 .img-contact {
   padding-top: 10px;
 }
+
+/* Media Queries */
+@media all and (max-width: 768px) {
+  .modal {
+    top: 8%
+  }
+  .modal-content {
+    width: 60%;
+    padding-bottom: 0;
+  }
+  .wpforms-container .wpforms-submit-container {
+    padding: inherit !important;
+  }
+  .wpforms-container .wpforms-field {
+    padding: 10px 0 !important;
+  }
+  #wpforms-22-field_2 {
+    height: 149px;
+  }
+  .wpforms-field-container {
+    margin-top: 0 !important;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .modal {
+    top: 12%
+  }
+  .modal-content {
+    width: 70%;
+  }
+  .wpforms-container .wpforms-field {
+    padding: 5px 0 !important;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .modal-content {
+    width: 80%;
+  }
+  .wpforms-container .wpforms-field {
+    padding: 2px 0 !important;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .modal-content {
+    width: 90%;
+  }
+}
