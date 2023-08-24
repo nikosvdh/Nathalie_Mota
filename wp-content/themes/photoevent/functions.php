@@ -33,7 +33,7 @@ $terms = get_terms(array(
     'hide_empty' => false,
 ));
 
-// format des images
+// Format des images de la galerie
 add_action('after_setup_theme', 'wpdocs_theme_setup');
 function wpdocs_theme_setup()
 {
@@ -148,7 +148,7 @@ function weichie_load_more()
         'orderby' => ['date' => 'DESC', 'ID' => 'ASC'] // On trie par date de manière décroissante et ensuite par ID de manière croissante pour résoudre les éventuelles égalités
     ]);
 
-    $response = ''; // on initialise la variable qu'on utilisera pour stocket le code HTML des images
+    $response = ''; // on initialise la variable qu'on utilisera pour stocker le code HTML des images
 
     if ($ajaxposts->have_posts()) {
         while ($ajaxposts->have_posts()) : $ajaxposts->the_post();

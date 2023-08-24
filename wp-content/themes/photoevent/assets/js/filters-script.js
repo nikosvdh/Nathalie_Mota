@@ -5,7 +5,7 @@
         $('#load-more').on('click', function(event) { // Ajout d'un event listener au clic
             currentPage++; // on incrémente de 1 à chaque clique sur le bouton qui porte cet ID
             $.ajax({ // On envoie une requête AJAX vers le serveur de type POST à l'URL
-                url: 'wp-admin/admin-ajax.php', // Use the global ajaxurl variable provided by WordPress
+                url: 'wp-admin/admin-ajax.php',
                 method: 'POST',
                 data: {
                     action: 'weichie_load_more',
@@ -55,7 +55,7 @@
     });
 })(jQuery);
 
-
+// DROPDOWN FILTRES
 // Remplacement du dropdown HTML standard par le dropdown Select2 pour personnalisation
 jQuery(document).ready(function($) {
     // on initialise Select2 

@@ -1,11 +1,11 @@
-<!-- Galerie Single -->
+<!-- Image pour la galerie -->
 
 <?php
 
 $thumbnail_id = get_post_thumbnail_id();
 $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'custom-size');
 
-// Récupération de l'attribut alt de l'image
+// Récupération de l'attribut ALT de l'image mise en avant pour une meilleure accessibilité
 $thumbnail_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
 
 // Récupérer la référence de l'article
@@ -23,7 +23,7 @@ $categories = get_terms(array(
 <div class="gallery-pic resize-pic">
     <div class="gallery-img">
         <img id="img-full" class="img-full" src="<?php echo $thumbnail_url[0]; ?>" alt="<?php echo $thumbnail_alt; ?>"
-            title="<?php echo $article_title; ?>" data-src-full="<?php the_post_thumbnail_url() ?>">
+            title="" data-src-full="<?php the_post_thumbnail_url() ?>">
         <div class="gallery-icons-hover">
             <a href="#">
                 <img class="icon-full"
