@@ -18,6 +18,7 @@
 .hero > img {
     width: 100%;
     max-height: 122.7vh;
+    object-fit: cover;
 }
 
 .gallery-container .gallery-img {
