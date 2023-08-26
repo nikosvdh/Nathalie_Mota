@@ -62,7 +62,30 @@ function showSliderPictures(arrow, image) {
     })
   }
 }
+
+// HERO
+// Sélection du conteneur du carrousel et toutes les images
+const slider = document.querySelector('.slider');
+const images = slider.querySelectorAll('img');
+      
+let currentIndex = 0;
+      
+// Fonction pour afficher la prochaine image
+function showNextImage() {
+  // Masquez l'image actuelle
+  images[currentIndex].style.display = 'none';
+          
+  // Passez à l'image suivante
+  currentIndex = (currentIndex + 1) % images.length;
+          
+  // Affichez l'image suivante
+  images[currentIndex].style.display = 'block';
+}
+      
+// Affichez la première image
+images[currentIndex].style.display = 'block';
+      
+// Démarrez le défilement automatique toutes les 3 secondes
+setInterval(showNextImage, 5000);
 })(jQuery); 
 })
-
- 

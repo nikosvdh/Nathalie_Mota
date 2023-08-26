@@ -21,6 +21,20 @@
     object-fit: cover;
 }
 
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider img {
+    max-width: 100%;
+    display: none;
+}
+
+.slider img:first-child {
+    display: block;
+}
+
 .gallery-container .gallery-img {
     height: 32.4vw;
     position: relative;
