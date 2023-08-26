@@ -13,22 +13,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.hero > img {
     width: 100%;
-    max-height: 122.7vh;
-    object-fit: cover;
 }
 
 .slider {
     display: flex;
     overflow: hidden;
+    width: 100%;
 }
 
 .slider img {
-    max-width: 100%;
+    width: 2544px !important;
+    max-height: 99.66vh; /* 750px */
     display: none;
+    object-fit: cover;
 }
 
 .slider img:first-child {
